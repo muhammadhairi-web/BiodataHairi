@@ -87,7 +87,7 @@ nav a:hover {
 }
 
 
-/*HEADER PARALLAX*/
+/* HEADER PARALLAX */
 header {
     height: 300px;
     background: url("background1.jpeg") center/cover fixed;
@@ -107,7 +107,7 @@ header h1 {
 }
 
 
-/*CONTAINERS + SCROLL REVEAL*/
+/* CONTAINERS + SCROLL REVEAL */
 .container {
     width: 90%;
     max-width: 900px;
@@ -192,16 +192,6 @@ header h1 {
 }
 
 /* ====================================== 
-   GENERAL ANIMATIONS
-========================================= */
-@keyframes reveal {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ======================================
    PROFILE IMAGE FLOAT ANIMATION
 ========================================= */
 .profile-wrapper {
@@ -326,82 +316,6 @@ button:hover {
 
 
 /* ======================================
-   RESPONSIVE
-========================================= */
-@media screen and (max-width: 600px) {
-    header h1 {
-        font-size: 1.7rem;
-    }
-
-    nav {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-
-/* ============================================
-   3D HOVER EFFECT – BUTTON
-=============================================== */
-button {
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-button:hover {
-    transform: translateY(-5px) rotateX(8deg);
-    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
-}
-
-
-/* ============================================
-   3D HOVER EFFECT – PROFILE IMAGE
-=============================================== */
-.profile-img {
-    transition: transform 0.5s ease, box-shadow 0.4s ease;
-}
-
-.profile-img:hover {
-    transform: rotateY(15deg) rotateX(5deg) scale(1.08);
-    box-shadow: 0 20px 25px rgba(0,0,0,0.35);
-}
-
-/* ============================================
-   NAVBAR 3D HOVER EFFECT
-=============================================== */
-nav a {
-    position: relative;
-    padding: 5px 10px;
-    display: inline-block;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Efek hover 3D */
-nav a:hover {
-    transform: translateY(-4px) rotateX(12deg);
-    color: #ffe680;
-    box-shadow: 0 12px 18px rgba(0,0,0,0.35);
-}
-
-/* Garis highlight neon tipis (3D feel) */
-nav a::after {
-    content: "";
-    position: absolute;
-    bottom: -2px;
-    left: 50%;
-    width: 0%;
-    height: 2px;
-    background: #ffe680;
-    transition: 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
-    left: 0;
-}
-
-/* ======================================
    CONTACT SECTION WITH ICONS
 ========================================= */
 #contact {
@@ -487,14 +401,3 @@ nav a:hover::after {
         font-size: 16px; /* Adjust icon size for smaller screens */
     }
 }
-
-/* ======================================
-   CONTACT SECTION ANIMATION
-========================================= */
-@keyframes reveal {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
