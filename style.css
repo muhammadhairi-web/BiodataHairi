@@ -1,0 +1,500 @@
+/* ======================================
+   GLOBAL STYLE
+========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f2f5f9;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    transition: background 0.4s, color 0.4s;
+}
+
+/* DARK MODE */
+body.dark {
+    background: #0f1117;
+    color: #e6e6e6;
+}
+
+body.dark nav {
+    background: #0c0e14;
+}
+
+body.dark .container {
+    background: #161921;
+    box-shadow: 0 4px 15px rgba(255,255,255,0.05);
+}
+
+body.dark .portfolio-item {
+    background: #1f2330;
+    border-color: #3a3f52;
+    color: #fff;
+}
+
+body.dark .input-box {
+    background: #1f2330;
+    border-left-color: #6d8eff;
+}
+
+
+/* ======================================
+   NAVBAR
+========================================= */
+nav {
+    width: 100%;
+    background: #1f2b50;
+    padding: 15px 30px;
+    display: flex;
+    gap: 25px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffe680;
+    transform: scale(1.1);
+}
+
+/* Dark mode toggle button */
+#darkToggle {
+    margin-left: auto;
+    padding: 8px 15px;
+    background: #ffe680;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+#darkToggle:hover {
+    background: #ffdd55;
+}
+
+
+/*HEADER PARALLAX*/
+header {
+    height: 300px;
+    background: url("background1.jpeg") center/cover fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 60px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+header h1 {
+    font-size: 2.3rem;
+    backdrop-filter: blur(3px);
+    padding: 8px 15px;
+    border-radius: 10px;
+}
+
+
+/*CONTAINERS + SCROLL REVEAL*/
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+
+    opacity: 0;
+    transform: translateY(15px);
+    animation: reveal 1s forwards;
+}
+
+.container:nth-child(odd) {
+    animation-delay: .2s;
+}
+
+.container:nth-child(even) {
+    animation-delay: .4s;
+}
+
+/* Scroll Reveal Animation */
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================================
+   ABOUT SECTION STYLE
+========================================= */
+#about {
+    background: #fff;
+    padding: 30px;
+    margin-top: 80px; /* Adjusting for navbar height */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(15px);
+    animation: reveal 1s forwards;
+}
+
+/* Adding delay for animation */
+#about:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+#about h2 {
+    font-size: 2rem;
+    color: #1f2b50;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#about p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+#about p strong {
+    font-weight: 600;
+    color: #1f2b50;
+}
+
+/* Adjust font size for smaller screens */
+@media screen and (max-width: 768px) {
+    #about {
+        padding: 20px;
+    }
+
+    #about h2 {
+        font-size: 1.7rem;
+    }
+
+    #about p {
+        font-size: 15px;
+    }
+}
+
+/* ====================================== 
+   GENERAL ANIMATIONS
+========================================= */
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ======================================
+   PROFILE IMAGE FLOAT ANIMATION
+========================================= */
+.profile-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #1f2b50;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+
+/* ======================================
+   PORTFOLIO GRID
+========================================= */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.portfolio-item {
+    background: #f0f4ff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 500;
+    transition: 0.3s;
+    border: 2px solid #cfd7f3;
+}
+
+.portfolio-item:hover {
+    background: #1f2b50;
+    color: white;
+    transform: translateY(-8px) scale(1.03);
+}
+
+
+/* ======================================
+   PROJECT INPUT BOX
+========================================= */
+.input-box {
+    background: #f4f6fc;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    border-left: 5px solid #1f2b50;
+}
+
+label {
+    display: block;
+    margin: 6px 0 3px;
+    font-weight: 500;
+    color: #1f2b50;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #cdd6f8;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #1f2b50;
+    outline: none;
+}
+
+button {
+    padding: 10px 18px;
+    background: #1f2b50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+button:hover {
+    background: #3c4f88;
+    transform: scale(1.05);
+}
+
+.result {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #1f2b50;
+}
+
+
+/* ======================================
+   GENERAL ANIMATIONS
+========================================= */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ======================================
+   RESPONSIVE
+========================================= */
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+
+/* ============================================
+   3D HOVER EFFECT – BUTTON
+=============================================== */
+button {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-5px) rotateX(8deg);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+
+/* ============================================
+   3D HOVER EFFECT – PROFILE IMAGE
+=============================================== */
+.profile-img {
+    transition: transform 0.5s ease, box-shadow 0.4s ease;
+}
+
+.profile-img:hover {
+    transform: rotateY(15deg) rotateX(5deg) scale(1.08);
+    box-shadow: 0 20px 25px rgba(0,0,0,0.35);
+}
+
+/* ============================================
+   NAVBAR 3D HOVER EFFECT
+=============================================== */
+nav a {
+    position: relative;
+    padding: 5px 10px;
+    display: inline-block;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efek hover 3D */
+nav a:hover {
+    transform: translateY(-4px) rotateX(12deg);
+    color: #ffe680;
+    box-shadow: 0 12px 18px rgba(0,0,0,0.35);
+}
+
+/* Garis highlight neon tipis (3D feel) */
+nav a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0%;
+    height: 2px;
+    background: #ffe680;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+/* ======================================
+   CONTACT SECTION WITH ICONS
+========================================= */
+#contact {
+    background: #fff;
+    padding: 30px;
+    margin-top: 80px; /* Adjusting for navbar height */
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(15px);
+    animation: reveal 1s forwards;
+}
+
+/* Adding delay for animation */
+#contact:nth-child(1) {
+    animation-delay: 0.6s;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    color: #1f2b50;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+#contact p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+#contact ul {
+    list-style: none;
+    padding: 0;
+}
+
+#contact ul li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+#contact a {
+    color: #1f2b50;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+#contact a:hover {
+    color: #ffe680;
+}
+
+#contact a i {
+    margin-right: 10px; /* Space between icon and text */
+    font-size: 18px; /* Icon size */
+}
+
+#contact a:hover i {
+    color: #ffe680; /* Change icon color on hover */
+}
+
+/* Responsive design for small screens */
+@media screen and (max-width: 768px) {
+    #contact {
+        padding: 20px;
+    }
+
+    #contact h2 {
+        font-size: 1.7rem;
+    }
+
+    #contact p {
+        font-size: 15px;
+    }
+
+    #contact ul li {
+        font-size: 14px;
+    }
+
+    #contact a i {
+        font-size: 16px; /* Adjust icon size for smaller screens */
+    }
+}
+
+/* ======================================
+   CONTACT SECTION ANIMATION
+========================================= */
+@keyframes reveal {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+

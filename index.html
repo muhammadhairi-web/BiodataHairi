@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Pribadi Sederhana</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="#biodata">Biodata</a>
+        <a href="#project">Project</a>
+        <a href="#contact">Contact</a>
+
+        <button id="darkToggle">Dark Mode</button>
+    </nav>
+
+    <header id="home">
+        <h1>Welcome to my Personal Web</h1>
+    </header>
+
+    <div class="container" id="about">
+    <h2>About</h2>
+    <p>Web ini saya buat untuk memenuhi tugas UTS Pemrograman Web dan sebagai latihan untuk mengasah keterampilan coding saya, terutama dalam HTML, CSS, dan JavaScript.</p>
+</div>
+
+
+    <div class="container" id="biodata">
+        <h2>Biodata</h2>
+        <div class="profile-wrapper">
+            <img src="background1.jpeg" class="profile-img" />
+        </div>
+        <p><strong>Nama:</strong> Muhammad Hairi</p>
+        <p><strong>NM:</strong> 2455201032</p>
+        <p><strong>Prodi:</strong>Teknik Informatika</p>
+        <p><strong>Kelas:</strong> TI - 31</p>
+        <p><strong>Hobi:</strong> Coding, Sports, Games</p>
+        <p><strong>Email:</strong> muhammadhairi2011@gmail.com</p>
+    </div>
+
+    <div class="container" id="project">
+        <h2>Project</h2>
+        <h3>1. Volume Kubus (R³)</h3>
+        <div class="input-box">
+            <label>Rusuk (R)</label>
+            <input type="number" id="rKubus">
+            <button onclick="hitungKubus()">Hitung</button>
+            <div id="hasilKubus" class="result"></div>
+        </div>
+
+        <h3>2. Volume Balok (p × l × t)</h3>
+        <div class="input-box">
+            <label>Panjang (p)</label>
+            <input type="number" id="pBalok">
+            <label>Lebar (l)</label>
+            <input type="number" id="lBalok">
+            <label>Tinggi (t)</label>
+            <input type="number" id="tBalok">
+            <button onclick="hitungBalok()">Hitung</button>
+            <div id="hasilBalok" class="result"></div>
+        </div>
+
+        <h3>3. Volume Limas Segiempat (1/3 × La × T)</h3>
+        <div class="input-box">
+            <label>Luas Alas (La)</label>
+            <input type="number" id="laLimas">
+            <label>Tinggi (T)</label>
+            <input type="number" id="tLimas">
+            <button onclick="hitungLimas()">Hitung</button>
+            <div id="hasilLimas" class="result"></div>
+        </div>
+
+        <h3>4. Volume Prisma Segitiga (1/2 × a × t × T)</h3>
+        <div class="input-box">
+            <label>Alas Segitiga (a)</label>
+            <input type="number" id="aPrisma">
+            <label>Tinggi Segitiga (t)</label>
+            <input type="number" id="tSegitiga">
+            <label>Tinggi Prisma (T)</label>
+            <input type="number" id="tPrisma">
+            <button onclick="hitungPrisma()">Hitung</button>
+            <div id="hasilPrisma" class="result"></div>
+        </div>
+    </div>
+
+    <div class="container" id="contact">
+    <h2>Contact</h2>
+    <p>Jika Anda ingin menghubungi saya, silakan kirim pesan melalui email saya di:</p>
+    <p><strong>Email:</strong> <a href="mailto:muhammadhairi2011@gmail.com"><i class="fas fa-envelope"></i> muhammadhairi2011@gmail.com</a></p>
+    
+    <p>Atau Anda bisa mengikuti saya di sosial media:</p>
+    <ul>
+        <li><a href="https://www.instagram.com/xxariunknown_/" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="https://www.tiktok.com/@ariiwow" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></li>
+        <li><a href="https://github.com/muhammadhairi-web" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+    </ul>
+</div>
+    <script src="script.js"></script>
+</body>
+</html> 
